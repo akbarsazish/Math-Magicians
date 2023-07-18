@@ -82,6 +82,7 @@ git clone https://github.com/akbarsazish/math.git
 
 ### Install
 `npm install`
+
 `npx create-react-app math-magician`
 
 
