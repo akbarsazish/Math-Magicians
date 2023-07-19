@@ -4,7 +4,7 @@ const CalcButtons = () => (
     <button type="button" className="calcItem btn-number">AC</button>
     <button type="button" className="calcItem btn-number">+/-</button>
     <button type="button" className="calcItem btn-number">%</button>
-    <button type="button" className="calcItem btn-sign">/</button>
+    <button type="button" className="calcItem btn-sign"> &#247; </button>
     <button type="button" className="calcItem btn-number">7</button>
     <button type="button" className="calcItem btn-number">8</button>
     <button type="button" className="calcItem btn-number">9</button>
