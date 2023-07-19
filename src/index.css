@@ -1,3 +1,50 @@
 body {
   margin: 0;
+  padding: 0;
+}
+
+.main {
+  height: 61vh;
+  width: 41vh;
+  margin: 0 auto;
+  margin-top: 22px;
+  background-color: #848693;
+  padding: 1vh;
+  text-align: center;
+  border-radius:3px;
+}
+
+.resultArea {
+  background-color: 848693;
+  width: 94%;
+  height: 33px;
+  text-align: right;
+  padding: 12px 6px 6px 6px;
+  color: #fff;
+  border-radius: 5px;
+  outline: none !important;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.calcItem {
+  width: 10vh;
+  height: 10vh;
+  cursor: pointer;
+  background-color: #90a4ae;
+  border-color: #90a4ae;
+  color: black;
+  box-shadow: 0px 5px 0px #6b8694;
+}
+
+.btn-number {
+  background-color: #e0e0e0;
+}
+
+.btn-sign {
+  background-color: #ff8e49;
+}
+.btn-zero {
+  width: 20vh;
+  height: 10vh;
 }

@@ -1,4 +1,4 @@
-const InputField = () => <input type="text" className="inputField" />;
+const ResultArea = () => <div type="text" className="resultArea"> 0 </div>;
 const CalcButtons = () => (
   <div className="calcContainer">
     <button type="button" className="calcItem btn-number">AC</button>
@@ -19,15 +19,15 @@ const CalcButtons = () => (
     <button type="button" className="calcItem btn-sign">+</button>
     <button type="button" className="calcItem btn-number btn-zero">0</button>
     <button type="button" className="calcItem btn-number">.</button>
-    <button type="button" className="calcItem btn-sign">+</button>
+    <button type="button" className="calcItem btn-sign"> = </button>
   </div>
 );
 
-const Calculator = () => {
+const Calculator = () => (
   <section className="main">
-    <InputField />
+    <ResultArea />
     <CalcButtons />
-  </section>;
-};
+  </section>
+);
 
 export default Calculator;
