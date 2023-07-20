@@ -31,8 +31,13 @@ const CalcButtons = ({ handlButton }) => (
   </div>
 );
 
+CalcButtons.propTypes = {
+  handlButton: PropTypes.func.isRequired,
+};
+
 const Calculator = () => {
   const [data, setData] = React.useState({ total: null, next: null, operation: null });
+
   const handleClick = (buttonName) => {
     setData(calculate(data, buttonName));
   };
@@ -40,7 +45,7 @@ const Calculator = () => {
   return (
     <section className="main">
       <ResultArea result={data.next || data.total || '0'} />
-      <CalcButtons  handlButton={handleClick}/>
+      <CalcButtons handlButton={handleClick} />
     </section>
   );
 };
