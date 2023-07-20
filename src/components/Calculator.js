@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 
 const ResultArea = ({ result }) => <div type="text" className="resultArea">{result}</div>;
+ResultArea.propTypes = {
+  result: PropTypes.string.isRequired,
+};
 
 const CalcButtons = () => (
   <div className="calcContainer">
@@ -27,11 +31,12 @@ const CalcButtons = () => (
   </div>
 );
 
-const Calculator = () => (
+const Calculator = () => {
+  const [data, setData] = React.useState({ total: null, next: null, operation: null });
   <section className="main">
-    <ResultArea />
+    <ResultArea result={data.next || data.total || '0'} />
     <CalcButtons />
   </section>
-);
+};
 
 export default Calculator;
