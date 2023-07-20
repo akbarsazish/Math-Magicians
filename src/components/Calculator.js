@@ -7,27 +7,27 @@ ResultArea.propTypes = {
   result: PropTypes.string.isRequired,
 };
 
-const CalcButtons = () => (
+const CalcButtons = ({ handlButton }) => (
   <div className="calcContainer">
-    <button type="button" className="calcItem btn-number">AC</button>
-    <button type="button" className="calcItem btn-number">+/-</button>
-    <button type="button" className="calcItem btn-number">%</button>
-    <button type="button" className="calcItem btn-sign"> ÷ </button>
-    <button type="button" className="calcItem btn-number">7</button>
-    <button type="button" className="calcItem btn-number">8</button>
-    <button type="button" className="calcItem btn-number">9</button>
-    <button type="button" className="calcItem btn-sign">X</button>
-    <button type="button" className="calcItem btn-number">4</button>
-    <button type="button" className="calcItem btn-number">5</button>
-    <button type="button" className="calcItem btn-number">6</button>
-    <button type="button" className="calcItem btn-sign">-</button>
-    <button type="button" className="calcItem btn-number">1</button>
-    <button type="button" className="calcItem btn-number">2</button>
-    <button type="button" className="calcItem btn-number">3</button>
-    <button type="button" className="calcItem btn-sign">+</button>
-    <button type="button" className="calcItem btn-number btn-zero">0</button>
-    <button type="button" className="calcItem btn-number">.</button>
-    <button type="button" className="calcItem btn-sign"> = </button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('AC')}>AC</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('+/-')}>+/-</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('%')}>%</button>
+    <button type="button" className="calcItem btn-sign" onClick={() => handlButton('÷')}> ÷ </button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('7')}>7</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('8')}>8</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('9')}>9</button>
+    <button type="button" className="calcItem btn-sign" onClick={() => handlButton('x')}>X</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('4')}>4</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('5')}>5</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('6')}>6</button>
+    <button type="button" className="calcItem btn-sign" onClick={() => handlButton('-')}>-</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('1')}>1</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('2')}>2</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('3')}>3</button>
+    <button type="button" className="calcItem btn-sign" onClick={() => handlButton('+')}>+</button>
+    <button type="button" className="calcItem btn-number btn-zero" onClick={() => handlButton('0')}>0</button>
+    <button type="button" className="calcItem btn-number" onClick={() => handlButton('.')}>.</button>
+    <button type="button" className="calcItem btn-sign" onClick={() => handlButton('=')}> = </button>
   </div>
 );
 
@@ -36,10 +36,13 @@ const Calculator = () => {
   const handleClick = (buttonName) => {
     setData(calculate(data, buttonName));
   };
+
+  return (
     <section className="main">
       <ResultArea result={data.next || data.total || '0'} />
-      <CalcButtons />
+      <CalcButtons  handlButton={handleClick}/>
     </section>
+  );
 };
 
 export default Calculator;
