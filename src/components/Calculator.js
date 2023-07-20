@@ -33,10 +33,13 @@ const CalcButtons = () => (
 
 const Calculator = () => {
   const [data, setData] = React.useState({ total: null, next: null, operation: null });
-  <section className="main">
-    <ResultArea result={data.next || data.total || '0'} />
-    <CalcButtons />
-  </section>
+  const handleClick = (buttonName) => {
+    setData(calculate(data, buttonName));
+  };
+    <section className="main">
+      <ResultArea result={data.next || data.total || '0'} />
+      <CalcButtons />
+    </section>
 };
 
 export default Calculator;
