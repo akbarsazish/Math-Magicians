@@ -9,7 +9,7 @@ const Quote = () => {
     const fetchQuote = async () => {
       try {
         const response = await fetch(
-          'https://api.api-ninjas.com/v1/quotes?category=computers&limit=1',
+          'https://api.api-ninjas.com/v1/quotes?category=education',
           {
             headers: {
               'X-Api-Key': 'RnsRXQB+C1lXlbhnahF5Rw==3ZjEYCzgkEmEnVdP',
@@ -22,11 +22,9 @@ const Quote = () => {
         }
 
         const data = await response.json();
-        console.log('Response data:', data);
-        setQuote(data.quotes.quote);
+        setQuote(data[0]);
         setLoading(false);
       } catch (error) {
-        console.error('Fetch error:', error);
         setError('Failed to fetch quote.');
         setLoading(false);
       }
@@ -43,7 +41,7 @@ const Quote = () => {
     /* eslint-disable */
     return <div>Error: {error}</div>;
   }
-  return <div className="quote">{quote}</div>;
+  return <div className="quote">{quote.quote} <br />  {quote.category}  <br /> {quote.author} </div>;
 };
 
 export default Quote;
