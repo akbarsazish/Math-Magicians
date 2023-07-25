@@ -41,7 +41,13 @@ const Quote = () => {
     /* eslint-disable */
     return <div>Error: {error}</div>;
   }
-  return <div className="quote">{quote.quote} <br />  {quote.category}  <br /> {quote.author} </div>;
+  return (
+    <div className="quote">
+          <b> Qoute: </b> {quote.quote} <br />  
+          <b> Author: </b> {quote.author}  <br /> 
+          <b> Category :  </b> {quote.category} <br /> 
+    </div>
+  );
 };
 
 export default Quote;
