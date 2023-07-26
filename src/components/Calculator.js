@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
+import Header from './Header';
 
 const ResultArea = ({ result }) => <div type="text" className="resultArea">{result}</div>;
 ResultArea.propTypes = {
@@ -43,10 +44,15 @@ const Calculator = () => {
   };
 
   return (
-    <section className="main">
-      <ResultArea result={data.next || data.total || '0'} />
-      <CalcButtons handlButton={handleClick} />
-    </section>
+    <>
+      <Header />
+      <div className="caclPage">
+        <div className="calculator">
+          <ResultArea result={data.next || data.total || '0'} />
+          <CalcButtons handlButton={handleClick} />
+        </div>
+      </div>
+    </>
   );
 };
 

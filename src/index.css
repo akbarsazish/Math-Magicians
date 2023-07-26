@@ -3,15 +3,22 @@ body {
   padding: 0;
 }
 
-.main {
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.calculator {
   height: 61vh;
   width: 41vh;
-  margin: 0 auto;
   margin-top: 22px;
   background-color: #848693;
   padding: 1vh;
   text-align: center;
   border-radius: 3px;
+  float: right;
 }
 
 .resultArea {
@@ -46,4 +53,54 @@ body {
 .btn-zero {
   width: 20vh;
   height: 10vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+
+.nav {
+  text-align: right;
+  padding: 5px;
+}
+
+.navItem {
+  margin: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.nav .navItem:not(:first-child) {
+  border-left: 3px solid #878;
+}
+
+.homePage {
+  margin: 11px 2px;
+}
+
+.paragraph {
+  margin: 9px;
+  font-size: 17px;
+}
+
+.welcome {
+  margin-top: 22px;
+  padding: 11px;
+}
+
+@media (max-width:768px) {
+  .header {
+    display: grid;
+    grid-template-columns: auto;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .nav {
+    text-align: center !important;
+    margin-right: 0px;
+  }
 }
