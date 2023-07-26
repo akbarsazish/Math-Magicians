@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 import Header from './Header';
@@ -37,7 +37,7 @@ CalcButtons.propTypes = {
 };
 
 const Calculator = () => {
-  const [data, setData] = React.useState({ total: null, next: null, operation: null });
+  const [data, setData] = useState({ total: null, next: null, operation: null });
 
   const handleClick = (buttonName) => {
     setData(calculate(data, buttonName));
