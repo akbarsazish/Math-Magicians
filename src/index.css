@@ -21,6 +21,19 @@ body {
   float: right;
 }
 
+.caclPage {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.calcText {
+  margin-top: 22px;
+}
+
 .resultArea {
   width: 94%;
   height: 33px;
@@ -91,7 +104,15 @@ body {
   padding: 11px;
 }
 
-@media (max-width:768px) {
+.quote {
+  padding: 10%;
+}
+
+.qouteText {
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
   .header {
     display: grid;
     grid-template-columns: auto;
@@ -101,6 +122,12 @@ body {
 
   .nav {
     text-align: center !important;
-    margin-right: 0px;
+    margin-right: 1px;
+  }
+
+  .caclPage {
+    grid-template-columns: auto;
+    padding: 4px;
+    justify-content: center;
   }
 }

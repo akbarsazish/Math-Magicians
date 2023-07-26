@@ -43,9 +43,7 @@ const Quote = () => {
   }
   return (
     <div className="quote">
-          <b> Qoute: </b> {quote.quote} <br />  
-          <b> Author: </b> {quote.author}  <br /> 
-          <b> Category :  </b> {quote.category} <br /> 
+      <p className="qouteText"> {quote.quote} - {quote.author}   </p>
     </div>
   );
 };

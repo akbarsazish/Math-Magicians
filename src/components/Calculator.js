@@ -47,6 +47,11 @@ const Calculator = () => {
     <>
       <Header />
       <div className="caclPage">
+        <div className="calcText">
+          <h1>
+            {'Let\'s Do Some Math! '}
+          </h1>
+        </div>
         <div className="calculator">
           <ResultArea result={data.next || data.total || '0'} />
           <CalcButtons handlButton={handleClick} />
