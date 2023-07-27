@@ -3,7 +3,7 @@ import Header from './Header';
 const Home = () => (
   <>
     <Header />
-    <div className="homePage">
+    <div className="homePage" data-testid="homePageContainer">
       <h2 className="welcome"> Welcome to our page! </h2>
       <p className="paragraph">
         At our website, we aim to provide you with an intuitive and user-friendly experience.
