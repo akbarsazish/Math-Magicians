@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Quote = () => {
+const Qoutes = () => {
   const [quote, setQuote] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -48,4 +48,4 @@ const Quote = () => {
   );
 };
 
-export default Quote;
+export default Qoutes;
