@@ -1,12 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 import Header from './Header';
-
-const ResultArea = ({ result }) => <div type="text" className="resultArea">{result}</div>;
-ResultArea.propTypes = {
-  result: PropTypes.string.isRequired,
-};
+import ResultArea from './ResultArea';
 
 const CalcButtons = ({ handlButton }) => (
   <div className="calcContainer">
@@ -37,7 +33,7 @@ CalcButtons.propTypes = {
 };
 
 const Calculator = () => {
-  const [data, setData] = React.useState({ total: null, next: null, operation: null });
+  const [data, setData] = useState({ total: null, next: null, operation: null });
 
   const handleClick = (buttonName) => {
     setData(calculate(data, buttonName));
