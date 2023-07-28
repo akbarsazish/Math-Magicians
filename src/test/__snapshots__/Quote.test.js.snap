@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Qoutes component displays an error message on fetch failure 1`] = `
+<div
+  data-testid="errorState"
+>
+  Error: 
+  Failed to fetch quote.
+</div>
+`;
+
+exports[`Qoutes component displays the fetched quote correctly 1`] = `
+<div
+  class="quote"
+  data-testid="quote"
+>
+  <p
+    class="qouteText"
+  >
+     
+    Mocked quote text
+     - 
+    Mocked author
+     
+  </p>
+</div>
+`;
+
+exports[`Qoutes component displays the loading state 1`] = `
+<div
+  data-testid="loadingState"
+>
+  Loading...
+</div>
+`;

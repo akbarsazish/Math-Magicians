@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultArea should render the result area with the correct text 1`] = `
+<div
+  class="resultArea"
+  data-testid="resultArea"
+  type="text"
+>
+  This is the result
+</div>
+`;

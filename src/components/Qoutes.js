@@ -34,16 +34,16 @@ const Qoutes = () => {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div data-testid="loadingState">Loading...</div>;
   }
 
   if (error) {
     /* eslint-disable */
-    return <div>Error: {error}</div>;
+    return <div data-testid="errorState">Error: {error}</div>;
   }
   return (
-    <div className="quote">
-      <p className="qouteText"> {quote.quote} - {quote.author}   </p>
+    <div data-testid="quote" className="quote">
+      <p className="qouteText"> {quote.quote} - {quote.author} </p>
     </div>
   );
 };
