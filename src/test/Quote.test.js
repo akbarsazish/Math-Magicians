@@ -16,7 +16,7 @@ test('Qoutes component displays an error message on fetch failure', async () => 
   jest.spyOn(global, 'fetch').mockRejectedValueOnce(new Error('Failed to fetch'));
   render(<Qoutes />);
   await waitFor(() => {
-    const errorElement = screen.getByText('Error: Failed to fetch quote.');
+    screen.getByText('Error: Failed to fetch quote.');
   });
 
   // Using Jest snapshot for the error state
@@ -34,7 +34,7 @@ test('Qoutes component displays the fetched quote correctly', async () => {
   });
   render(<Qoutes />);
   await waitFor(() => {
-    const quoteElement = screen.getByText('Mocked quote text - Mocked author');
+    screen.getByText('Mocked quote text - Mocked author');
   });
 
   // Using Jest snapshot for the fetched quote

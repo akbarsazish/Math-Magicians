@@ -21,7 +21,7 @@ test('Home page displays welcome message', () => {
   render(<Home />);
 
   const welcomeMessage = screen.getByText('Welcome to our page!');
-  expect(welcomeMessage).toBeInTheDocument();
+  expect(welcomeMessage).toMatchSnapshot();
 });
 
 test('Home page displays paragraphs', () => {
@@ -33,8 +33,8 @@ test('Home page displays paragraphs', () => {
 
   expect(paragraphs).toHaveLength(2);
 
-  expect(paragraphs[0]).toHaveTextContent('At our website, we aim to provide you with an intuitive');
-  expect(paragraphs[1]).toHaveTextContent('For those who find inspiration in the world of mathematics');
+  expect(paragraphs[0]).toMatchSnapshot();
+  expect(paragraphs[1]).toMatchSnapshot();
 });
 
 test('Home page contains the Header component', () => {
@@ -45,5 +45,5 @@ test('Home page contains the Header component', () => {
   );
 
   const headerElement = screen.getByRole('banner');
-  expect(headerElement).toBeInTheDocument();
+  expect(headerElement).toMatchSnapshot();
 });

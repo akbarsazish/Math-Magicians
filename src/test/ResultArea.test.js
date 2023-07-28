@@ -12,7 +12,7 @@ describe('ResultArea', () => {
 
   it('should throw an error if the result prop is not a string', () => {
     try {
-      render(<ResultArea result={"123"} />);
+      render(<ResultArea result="123" />);
     } catch (error) {
       expect(error).toMatchSnapshot();
     }
