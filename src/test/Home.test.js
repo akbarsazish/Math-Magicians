@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import Home from '../components/Home';
 
-// Mock the Header component for testing
+/* eslint-disable */
 jest.mock('../components/Header', () => () => (
   <header role="banner">
     {/* Mocked Header content */}
@@ -36,7 +36,7 @@ test('Home page contains the Header component', () => {
   render(
     <Router>
       <Home />
-    </Router>
+    </Router>,
   );
 
   const headerElement = screen.getByRole('banner');

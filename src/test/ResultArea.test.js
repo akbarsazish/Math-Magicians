@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; 
+import '@testing-library/jest-dom/extend-expect';
 import ResultArea from '../components/ResultArea';
 
 describe('ResultArea', () => {
@@ -13,10 +13,10 @@ describe('ResultArea', () => {
 
   it('should throw an error if the result prop is not a string', () => {
     try {
-      render(<ResultArea result={'123'} />);
+      render(<ResultArea result="123" />);
     } catch (error) {
       expect(error.message).toBe(
-        'The result prop must be a string. Received: 123'
+        'The result prop must be a string. Received: 123',
       );
     }
   });

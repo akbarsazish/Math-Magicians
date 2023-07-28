@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Qoutes from '../components/Qoutes';
+
 test('Qoutes component displays the loading state', async () => {
   render(<Qoutes />);
   const loadingElement = screen.getByText('Loading...');
