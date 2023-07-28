@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header displays the correct navigation links 1`] = `
+<a
+  class="navItem"
+  href="/quots"
+>
+   Qoute 
+</a>
+`;
+
+exports[`Header displays the correct title 1`] = `
+<h1
+  class="bigTitle"
+>
+   Math Magician 
+</h1>
+`;
+
+exports[`Header navigation links have the correct URLs 1`] = `"/quots"`;

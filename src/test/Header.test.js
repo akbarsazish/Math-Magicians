@@ -12,7 +12,7 @@ test('Header displays the correct title', () => {
   );
 
   const titleElement = screen.getByText('Math Magician');
-  expect(titleElement).toBeInTheDocument();
+  expect(titleElement).toMatchSnapshot();
 });
 
 test('Header displays the correct navigation links', () => {
@@ -28,7 +28,7 @@ test('Header displays the correct navigation links', () => {
 
   expect(homeLink).toBeInTheDocument();
   expect(calculatorLink).toBeInTheDocument();
-  expect(quoteLink).toBeInTheDocument();
+  expect(quoteLink).toMatchSnapshot(); // Use snapshot for the navigation links
 });
 
 test('Header navigation links have the correct URLs', () => {
@@ -44,5 +44,5 @@ test('Header navigation links have the correct URLs', () => {
 
   expect(homeLink.getAttribute('href')).toBe('/');
   expect(calculatorLink.getAttribute('href')).toBe('/calculator');
-  expect(quoteLink.getAttribute('href')).toBe('/quots'); // Note the typo in the component (should be "/quotes")
+  expect(quoteLink.getAttribute('href')).toMatchSnapshot(); // Use snapshot for the link URLs
 });
