@@ -8,7 +8,7 @@ test('Header displays the correct title', () => {
   render(
     <Router>
       <Header />
-    </Router>
+    </Router>,
   );
 
   const titleElement = screen.getByText('Math Magician');
@@ -19,7 +19,7 @@ test('Header displays the correct navigation links', () => {
   render(
     <Router>
       <Header />
-    </Router>
+    </Router>,
   );
 
   const homeLink = screen.getByText('Home');
@@ -35,7 +35,7 @@ test('Header navigation links have the correct URLs', () => {
   render(
     <Router>
       <Header />
-    </Router>
+    </Router>,
   );
 
   const homeLink = screen.getByText('Home');

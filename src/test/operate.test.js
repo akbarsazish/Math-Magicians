@@ -16,4 +16,4 @@ describe('operates two numbers', () => {
   it('returns rest', () => {
     expect(() => operate(4, 2, '%').toBe('0'));
   });
-})
+});
