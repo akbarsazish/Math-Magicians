@@ -57,7 +57,7 @@
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> coming soon 🎈
+[Live Demo On render](https://math-magicians-9om6.onrender.com)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
