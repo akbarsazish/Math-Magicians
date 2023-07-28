@@ -5,12 +5,17 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom';
 import Home from '../components/Home';
 
-/* eslint-disable */
-jest.mock('../components/Header', () => () => (
-  <header role="banner">
-    {/* Mocked Header content */}
-  </header>
-));
+// Mock the Header component for testing
+jest.mock('../components/Header', () => {
+  function Header() {
+    return (
+      <header role="banner">
+        {/* Mocked Header content */}
+      </header>
+    );
+  }
+  return Header;
+});
 
 test('Home page displays welcome message', () => {
   render(<Home />);
