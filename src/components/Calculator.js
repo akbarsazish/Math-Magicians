@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import calculate from '../logic/calculate';
 import Header from './Header';
 import ResultArea from './ResultArea';
+import math from './assets/math.png';
 
 const CalcButtons = ({ handlButton }) => (
   <div className="calcContainer">
@@ -44,9 +45,10 @@ const Calculator = () => {
       <Header />
       <div className="caclPage">
         <div className="calcText">
-          <h1>
+          <h1 className="math-text">
             {'Let\'s Do Some Math! '}
           </h1>
+          <img src={math} alt={math} />
         </div>
         <div className="calculator">
           <ResultArea result={data.next || data.total || '0'} />

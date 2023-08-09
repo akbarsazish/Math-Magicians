@@ -31,7 +31,11 @@ body {
 }
 
 .calcText {
-  margin-top: 22px;
+  margin: 5px;
+}
+
+.math-text {
+  margin-bottom: 0px;
 }
 
 .resultArea {
@@ -77,6 +81,7 @@ body {
 .nav {
   text-align: right;
   padding: 5px;
+  margin-top: 20px;
 }
 
 .navItem {
